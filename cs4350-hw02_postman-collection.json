@@ -13,7 +13,13 @@
 					"name": "Get All Products",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "http://localhost:8000/products",
 							"protocol": "http",
@@ -32,7 +38,13 @@
 					"name": "Get a Product",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "http://localhost:8000/products/7",
 							"protocol": "http",
@@ -55,12 +67,24 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json"
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"type\": \"string\",\n  \"default\": \"{\\\"name\\\":\\\"Adj. Prof. Don Stringham\\\",\\\"description\\\":\\\"Ut rem et aliquid harum officia mollitia dicta. Eligendi quis sed harum praesentium et. Aliquam est enim laborum ex in consectetur et.\\\",\\\"price\\\":\\\"249\\\"}\"\n}"
+							"raw": "{\n  \"description\": \"Ut rem et aliquid harum officia mollitia dicta. Eligendi quis sed harum praesentium et. Aliquam est enim laborum ex in consectetur et.\",\n  \"name\": \"Adj. Prof. Don Stringham\",\n  \"price\": \"249\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
 							"raw": "http://localhost:8000/products",
@@ -84,14 +108,19 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"type\": \"string\",\n  \"default\": \"{\\\"name\\\":\\\"Adj. Prof. Don Stringham\\\",\\\"description\\\":\\\"Ut rem et aliquid harum officia mollitia dicta. Eligendi quis sed harum praesentium et. Aliquam est enim laborum ex in consectetur et.\\\",\\\"price\\\":\\\"567\\\"}\"\n}"
+							"raw": "{\n  \"description\": \"Ut rem et aliquid harum officia mollitia dicta. Eligendi quis sed harum praesentium et. Aliquam est enim laborum ex in consectetur et.\",\n  \"name\": \"Adj. Prof. Don Stringham\",\n  \"price\": \"567\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8000/products/12",
+							"raw": "http://localhost:8000/products/13",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -99,7 +128,7 @@
 							"port": "8000",
 							"path": [
 								"products",
-								"12"
+								"13"
 							]
 						}
 					},
@@ -109,13 +138,19 @@
 					"name": "Delete a Product",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"type\": \"string\",\n  \"default\": \"\"\n}"
+							"raw": ""
 						},
 						"url": {
-							"raw": "http://localhost:8000/products/12",
+							"raw": "http://localhost:8000/products/13",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -123,7 +158,7 @@
 							"port": "8000",
 							"path": [
 								"products",
-								"12"
+								"13"
 							]
 						}
 					},
